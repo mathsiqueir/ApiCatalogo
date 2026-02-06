@@ -1,0 +1,18 @@
+﻿services:
+  db:
+    image: mysql/mysql-server:latest
+    container_name: my-mysql
+    restart: always
+    environment:
+      MYSQL_USER: apiuser
+      MYSQL_DATABASE: ApiCatalogoDB
+      MYSQL_PASSWORD: "81081184"
+      MYSQL_ROOT_PASSWORD: "8108"
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql-volume:/var/lib/mysql
+volumes:
+  mysql-volume:
+    driver: local   
