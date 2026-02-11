@@ -110,3 +110,5 @@ C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\refint\Ap
 C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.pdb
 C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ref\ApiCatalogo.dll
+C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.sourcelink.json
+C:\Users\Usuario\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
