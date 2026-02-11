@@ -2,31 +2,35 @@
 using ApiCatalogo.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ControllersController : ControllerBase
+    public class CategoriasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public ControllersController(AppDbContext context)
+        public CategoriasController(AppDbContext context)
         {
             _context = context;
         }
 
-        [HttpGet("categorias")]
+        [HttpGet]
         public ActionResult<IEnumerable<Categoria>> get()
         {
-            var categorias = _context.Categorias.ToList();
-
-            if(categorias == null)
+            try
             {
-                return NotFound();
+                 return _context.Categorias.AsNoTracking().ToList();
             }
-            return Ok(categorias);
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Ocorreu um problema ao tratar a sua solicitação");
+            }
         }
+
         [HttpGet("{id:int}")]
         public ActionResult<Categoria> get(int id)
         {
@@ -37,30 +41,42 @@ namespace ApiCatalogo.Controllers
             }
             return Ok(categoria);
         }
-        [HttpPost("categorias")]
+
+        [HttpPost()]
         public ActionResult post(Categoria categoria)
         {
-            if(categoria is null)
+            if (categoria is null)
             {
                 return BadRequest();
             }
             _context.Categorias.Add(categoria);
             _context.SaveChanges();
-
             return new CreatedAtRouteResult("getCategoria", new { id = categoria.CategoriaId }, categoria);
         }
-        [HttpDelete("categoria/{int:id}")]
+
+        [HttpPut("{id:int}")]  // FIXED: was {int:id}
+        public ActionResult put(int id, Categoria categoria)
+        {
+            if (id != categoria.CategoriaId)
+            {
+                return BadRequest();
+            }
+            _context.Entry(categoria).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.SaveChanges();
+            return Ok(categoria);
+        }
+
+        [HttpDelete("{id:int}")]  // FIXED: was {int:id}
         public ActionResult delete(int id)
         {
-            var categoria = _context.Categorias.FirstOrDefault(c -> c.categoriaId == id);
-            if(categoria is null)
+            var categoria = _context.Categorias.FirstOrDefault(c => c.CategoriaId == id);
+            if (categoria is null)
             {
                 return NotFound();
             }
             _context.Categorias.Remove(categoria);
             _context.SaveChanges();
             return Ok(categoria);
-
         }
     }
 }

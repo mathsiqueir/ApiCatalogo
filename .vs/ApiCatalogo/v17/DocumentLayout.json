@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\controllers\\controllerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\controllers\\controllerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\migrations\\20260204222451_populacategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\migrations\\20260204222451_populacategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\migrations\\20260204222548_populaprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\migrations\\20260204222548_populaprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\apicatalogo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\apicatalogo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\usuario\\source\\repos\\apicatalogo\\apicatalogo\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3CF8644-D2C7-4D65-B064-16348C2A5467}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControllersController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Controllers\\ControllersController.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Controllers\\ControllersController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Controllers\\ControllersController.cs",
-              "RelativeToolTip": "ApiCatalogo\\Controllers\\ControllersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T11:58:56.282Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -69,95 +28,25 @@
               "RelativeDocumentMoniker": "ApiCatalogo\\Controllers\\ProdutosController.cs",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Controllers\\ProdutosController.cs",
               "RelativeToolTip": "ApiCatalogo\\Controllers\\ProdutosController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T23:33:42.85Z",
+              "WhenOpened": "2026-02-11T22:03:15.285Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260204222548_PopulaProdutos.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Migrations\\20260204222548_PopulaProdutos.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Migrations\\20260204222548_PopulaProdutos.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Migrations\\20260204222548_PopulaProdutos.cs",
-              "RelativeToolTip": "ApiCatalogo\\Migrations\\20260204222548_PopulaProdutos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "ApiCatalogo\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T22:25:51.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20260204222451_PopulaCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Migrations\\20260204222451_PopulaCategorias.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Migrations\\20260204222451_PopulaCategorias.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Migrations\\20260204222451_PopulaCategorias.cs",
-              "RelativeToolTip": "ApiCatalogo\\Migrations\\20260204222451_PopulaCategorias.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T22:24:56.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApiCatalogo.csproj",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
-              "RelativeDocumentMoniker": "ApiCatalogo\\ApiCatalogo.csproj",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
-              "RelativeToolTip": "ApiCatalogo\\ApiCatalogo.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-04T22:14:00.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Program.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Program.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Program.cs",
-              "RelativeToolTip": "ApiCatalogo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T21:56:56.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "ApiCatalogo\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "ApiCatalogo\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T21:42:07.251Z",
+              "WhenOpened": "2026-02-11T11:51:47.3Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\docker-compose.yml",
-              "RelativeDocumentMoniker": "ApiCatalogo\\docker-compose.yml",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\docker-compose.yml",
-              "RelativeToolTip": "ApiCatalogo\\docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-02-04T21:41:09.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\appsettings.json",
-              "RelativeDocumentMoniker": "ApiCatalogo\\appsettings.json",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ApiCatalogo\\ApiCatalogo\\appsettings.json",
-              "RelativeToolTip": "ApiCatalogo\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-04T21:33:08.509Z"
             }
           ]
         }

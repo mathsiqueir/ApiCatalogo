@@ -2,7 +2,9 @@
 using ApiCatalogo.Context;
 using ApiCatalogo.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Controllers
 {
@@ -17,11 +19,14 @@ namespace ApiCatalogo.Controllers
             _context = context;
         }
 
-        [HttpGet("produtos")]
+        [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get()
         {
-            var produtos = _context.Produtos.ToList();
-
+            var produtos = _context.Produtos.AsNoTracking().ToList();
+            /*_context.Produtos.AsNoTracking().ToList()
+             * Take(10).list() - para limitar a quantidade de registros retornados
+             * Where(p => p.Preco > 100) - para filtrar os produtos por preço
+            */
             if (produtos is null)
             {
                 return NotFound("Produtos não encontrados");
@@ -29,7 +34,7 @@ namespace ApiCatalogo.Controllers
             return produtos;
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {
             var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
@@ -39,7 +44,7 @@ namespace ApiCatalogo.Controllers
             }
             return produto;
         }
-        [HttpPost()]
+        [HttpPost]
         public ActionResult Post(Produto produto)
         {
             if (produto is null)
@@ -49,18 +54,21 @@ namespace ApiCatalogo.Controllers
             _context.Produtos.Add(produto);
             _context.SaveChanges();
 
-            return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produto);
+            return CreatedAtRoute("ObterProduto", new { id = produto.ProdutoId }, produto);
 
         }
 
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, Produto produto)
         {
-            var produtoBanco = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-            if (produtoBanco is null)
+            if (id != produto.ProdutoId)
             {
-                return NotFound();
+                return BadRequest("ID mismatch");
             }
+
+            _context.Entry(produto).State = EntityState.Modified;
+            _context.SaveChanges();
+
             return Ok(produto);
         }
         [HttpDelete("{id:int}")]
