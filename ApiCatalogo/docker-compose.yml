@@ -2,7 +2,7 @@
   db:
     image: mysql/mysql-server:latest
     container_name: my-mysql
-    restart: always
+    restart: no;
     environment:
       MYSQL_USER: apiuser
       MYSQL_DATABASE: ApiCatalogoDB

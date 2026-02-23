@@ -1,87 +1,73 @@
-﻿
-using ApiCatalogo.Context;
+﻿using ApiCatalogo.Context;
 using ApiCatalogo.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiCatalogo.Controllers
+namespace APICatalogo.Controllers;
+
+[Route("[controller]")]
+[ApiController]
+public class ProdutosController : ControllerBase
 {
-    [Route("[controller]")]
-    [ApiController]
-    public class ProdutosController : ControllerBase
+    private readonly AppDbContext _context;
+    public ProdutosController(AppDbContext context)
     {
-        private readonly AppDbContext _context;
-
-        public ProdutosController(AppDbContext context)
+        _context = context;
+    }
+    //tipo de retorno ActionResult<T> - T é o tipo do retorno, nesse caso Produto
+    //ActionResult é uma classe base para os tipos de retorno de ação, como Ok(), NotFound(), BadRequest(), etc.
+    //IEnumerable<Produto> é uma interface que representa uma coleção de objetos do tipo Produto, permitindo a iteração sobre eles.
+    //O método Get() retorna uma coleção de produtos, e o método Get(int id, string param2) retorna um produto específico com base no ID fornecido.
+    //O método Post(Produto produto) é usado para criar um novo produto, enquanto o método Put(int id, Produto produto) é usado para atualizar um produto existente. O método Delete(int id) é usado para excluir um produto com base no ID fornecido.
+    //O método Get() retorna uma coleção de produtos, e o método Get(int id, string param2) retorna um produto específico com base no ID fornecido. 
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Produto>>> Get()
+    {
+        var produtos = await _context.Produtos!.AsNoTracking().ToListAsync();
+        if (produtos is null)
         {
-            _context = context;
+            return NotFound();
         }
+        return produtos;
+    }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<Produto>> Get()
+    [HttpGet("{id:int}", Name = "ObterProduto")]
+    public async Task<ActionResult<Produto>> Get([FromQuery]int id)
+    {
+        
+        var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.ProdutoId == id);
+        if (produto is null)
         {
-            var produtos = _context.Produtos.AsNoTracking().ToList();
-            /*_context.Produtos.AsNoTracking().ToList()
-             * Take(10).list() - para limitar a quantidade de registros retornados
-             * Where(p => p.Preco > 100) - para filtrar os produtos por preço
-            */
-            if (produtos is null)
-            {
-                return NotFound("Produtos não encontrados");
-            }
-            return produtos;
+            return NotFound("Produto não encontrado...");
         }
+        return produto;
+    }
 
-        [HttpGet("{id:int}", Name = "ObterProduto")]
-        public ActionResult<Produto> Get(int id)
-        {
-            var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-            if (produto is null)
-            {
-                return NotFound();
-            }
-            return produto;
-        }
-        [HttpPost]
-        public ActionResult Post(Produto produto)
-        {
-            if (produto is null)
-            {
-                return BadRequest();
-            }
-            _context.Produtos.Add(produto);
-            _context.SaveChanges();
+    [HttpPost]
+    public async Task<ActionResult> Post(Produto produto)
+    {
+        if (produto is null) return BadRequest();
+        _context.Produtos!.Add(produto);
+        await _context.SaveChangesAsync();
+        return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produto);
+    }
 
-            return CreatedAtRoute("ObterProduto", new { id = produto.ProdutoId }, produto);
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult> Put(int id, Produto produto)
+    {
+        if (id != produto.ProdutoId) return BadRequest();
+        _context.Entry(produto).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+        return Ok(produto);
+    }
 
-        }
-
-        [HttpPut("{id:int}")]
-        public ActionResult Put(int id, Produto produto)
-        {
-            if (id != produto.ProdutoId)
-            {
-                return BadRequest("ID mismatch");
-            }
-
-            _context.Entry(produto).State = EntityState.Modified;
-            _context.SaveChanges();
-
-            return Ok(produto);
-        }
-        [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id)
-        {
-            var produtoBanco = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-            if (produtoBanco is null)
-            {
-                return NotFound();
-            }
-            _context.Produtos.Remove(produtoBanco);
-            _context.SaveChanges();
-            return NoContent();
-        }
+    [HttpDelete("{id:int}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        var produto = await _context.Produtos!.FirstOrDefaultAsync(p => p.ProdutoId == id);
+        if (produto is null) return NotFound("Produto não localizado...");
+        _context.Produtos.Remove(produto);
+        await _context.SaveChangesAsync();
+        return Ok(produto);
     }
 }

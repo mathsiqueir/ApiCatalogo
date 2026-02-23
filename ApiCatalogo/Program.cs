@@ -1,4 +1,6 @@
 using ApiCatalogo.Context;
+using ApiCatalogo.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,9 @@ string? mysqlConnection = builder.Configuration.GetConnectionString("MySqlConnec
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(mysqlConnection, ServerVersion.AutoDetect(mysqlConnection)));
+
+builder.Services.AddScoped<AppDbContext>();
+builder.Services.AddTransient<IMeuServico, MeuServico>();
 
 var app = builder.Build();
 
