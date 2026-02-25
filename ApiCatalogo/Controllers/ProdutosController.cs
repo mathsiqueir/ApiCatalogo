@@ -32,7 +32,7 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpGet("{id:int}", Name = "ObterProduto")]
-    public async Task<ActionResult<Produto>> Get([FromQuery]int id)
+    public async Task<ActionResult<Produto>> Get(int id)
     {
         
         var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.ProdutoId == id);

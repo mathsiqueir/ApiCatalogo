@@ -5,20 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/Categorias/UsandoFromServices/{nome}": {
+    "/Categorias/LerArquivoConfiguracao": {
       "get": {
         "tags": [
           "Categorias"
-        ],
-        "parameters": [
-          {
-            "name": "nome",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -327,18 +317,11 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],

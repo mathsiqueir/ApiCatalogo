@@ -11,9 +11,11 @@ namespace APICatalogo.Controllers;
 public class CategoriasController : ControllerBase
 {
     private readonly AppDbContext _context;
-    public CategoriasController(AppDbContext context)
+    private readonly IConfiguration _configuration;
+    public CategoriasController(AppDbContext context, IConfiguration configuration)
     {
         _context = context;
+        _configuration = configuration;
     }
     //[HttpGet("UsandoFromServices/{nome}")]
     //public ActionResult<string> GetSaudacaoFromServices([FromServices] IMeuServico meuServico, string nome)
@@ -26,12 +28,23 @@ public class CategoriasController : ControllerBase
     //    return meuServico.Saudacao(nome);
     //}
 
+    [HttpGet("LerArquivoConfiguracao")]
+    public string GetConfiguracao()
+    {
+        var valor1 = _configuration["chave1"];
+        var valor2 = _configuration["chave2"];
+
+        var secao1 = _configuration["secao1:chave1"];
+
+        return $"Valor1: {valor1}, Valor2: {valor2}, Seção1: {secao1}";
+    }
+
     [HttpGet("produtos")]
     public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
     {
         try
         {
-            return _context.Categorias.Include(p => p.Produtos).ToList();
+            return _context.Categorias.Include(p => p.Produtos).Where(c => c.CategoriaId <= 5).ToList();
         }
         catch (Exception)
         {
